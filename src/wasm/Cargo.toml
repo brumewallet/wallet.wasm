@@ -1,0 +1,30 @@
+[package]
+name = "wallet_wasm"
+version = "1.0.0"
+authors = ["hazae41 <4405263+hazae41@users.noreply.github.com>"]
+edition = "2021"
+
+description = "WebAssembly bundle for Wallet"
+repository = "https://github.com/brumemoney/wallet.wasm"
+license = "Unlicense"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[profile.release]
+lto = true
+debug = false
+opt-level = 3
+
+[dependencies]
+base16_wasm = { path = "../../node_modules/@hazae41/base16.wasm/dist/wasm" }
+base58_wasm = { path = "../../node_modules/@hazae41/base58.wasm/dist/wasm"}
+base64_wasm = { path = "../../node_modules/@hazae41/base64.wasm/dist/wasm" }
+chacha20poly1305_wasm = { path = "../../node_modules/@hazae41/chacha20poly1305.wasm/dist/wasm" }
+ed25519_wasm = { path = "../../node_modules/@hazae41/ed25519.wasm/dist/wasm" }
+network_wasm = { path = "../../node_modules/@hazae41/network.wasm/dist/wasm" }
+ripemd_wasm = { path = "../../node_modules/@hazae41/ripemd.wasm/dist/wasm" }
+secp256k1_wasm = { path = "../../node_modules/@hazae41/secp256k1.wasm/dist/wasm" }
+sha1_wasm = { path = "../../node_modules/@hazae41/sha1.wasm/dist/wasm" }
+sha3_wasm = { path = "../../node_modules/@hazae41/sha3.wasm/dist/wasm" }
+x25519_wasm = { path = "../../node_modules/@hazae41/x25519.wasm/dist/wasm" }

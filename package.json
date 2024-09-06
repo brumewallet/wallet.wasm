@@ -1,0 +1,70 @@
+{
+  "type": "module",
+  "name": "@brumemoney/wallet.wasm",
+  "version": "1.0.0",
+  "description": "WebAssembly bundle for Wallet",
+  "homepage": "https://github.com/brumemoney/wallet.wasm",
+  "repository": "github:brumemoney/wallet.wasm",
+  "author": "hazae41",
+  "license": "Unlicense",
+  "main": "./dist/cjs/node/index.cjs",
+  "module": "./dist/esm/node/index.mjs",
+  "types": "./dist/types/node/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "./dist/esm",
+    "./dist/cjs",
+    "./dist/types"
+  ],
+  "scripts": {
+    "build:wasm": "cd ./src/wasm && rimraf pkg && wasm-pack build --target web --release && cd ../.. && node patch.wasm.mjs",
+    "build:node": "rimraf dist && rollup -c && rsync -a ./src/wasm ./dist --exclude=target --exclude=pkg && node patch.node.mjs",
+    "build": "npm run build:wasm && npm run build:node",
+    "test": "node ./dist/test/node/index.test.mjs",
+    "prepare": "npm run build:node"
+  },
+  "devDependencies": {
+    "@hazae41/deimos": "^1.0.6",
+    "@hazae41/phobos": "^1.0.10",
+    "@hazae41/rimraf": "^1.0.1",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^22.5.4",
+    "rollup": "^4.21.2",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-node-externals": "^7.1.3",
+    "tslib": "^2.7.0",
+    "typescript": "^5.5.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/node/index.d.ts",
+      "import": "./dist/esm/node/index.mjs",
+      "require": "./dist/cjs/node/index.cjs"
+    }
+  },
+  "keywords": [
+    "reproducible",
+    "webassembly",
+    "cryptography",
+    "wallet",
+    "brume",
+    "browser",
+    "typescript",
+    "rust",
+    "unit-tested",
+    "deno"
+  ],
+  "peerDependencies": {
+    "@hazae41/base16.wasm": "^1.0.5",
+    "@hazae41/base58.wasm": "^1.0.6",
+    "@hazae41/base64.wasm": "^1.0.9",
+    "@hazae41/chacha20poly1305.wasm": "^1.0.1",
+    "@hazae41/ed25519.wasm": "^1.0.11",
+    "@hazae41/network.wasm": "^1.0.2",
+    "@hazae41/ripemd.wasm": "^1.0.6",
+    "@hazae41/secp256k1.wasm": "^1.0.10",
+    "@hazae41/sha1.wasm": "^1.0.5",
+    "@hazae41/sha3.wasm": "^1.0.4",
+    "@hazae41/x25519.wasm": "^1.0.8"
+  }
+}
