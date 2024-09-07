@@ -14,7 +14,7 @@ crate-type = ["cdylib", "lib"]
 [profile.release]
 lto = true
 debug = false
-opt-level = 3
+opt-level = "z"
 
 [dependencies]
 base16_wasm = { path = "../../node_modules/@hazae41/base16.wasm/dist/wasm" }
