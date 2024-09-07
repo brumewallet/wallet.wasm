@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@brumewallet/wallet.wasm",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "WebAssembly bundle for Wallet",
   "homepage": "https://github.com/brumewallet/wallet.wasm",
   "repository": "github:brumewallet/wallet.wasm",
