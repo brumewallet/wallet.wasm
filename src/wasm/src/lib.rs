@@ -1,3 +1,5 @@
+#![allow(unused_imports)]
+
 pub use base16_wasm::*;
 pub use base58_wasm::*;
 pub use base64_wasm::*;

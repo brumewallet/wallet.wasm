@@ -49,9 +49,11 @@ const secretBase16 = base16_encode_lower(secretMemory)
 using proofMemory = generated.to_proof()
 const proofBase16 = base16_encode_lower(proofMemory)
 
-const valueBase16 = base16_encode_lower(generated.to_value())
+using valueMemory = generated.to_value()
+const valueBase16 = base16_encode_lower(valueMemory)
 const valueBigInt = BigInt("0x" + valueBase16)
 
 console.log(valueBigInt, secretBase16, proofBase16)
 
 console.log(`Generated ${valueBigInt} wei in ${end - start}ms`)
+

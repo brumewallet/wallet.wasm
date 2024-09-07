@@ -5,7 +5,7 @@ authors = ["hazae41 <4405263+hazae41@users.noreply.github.com>"]
 edition = "2021"
 
 description = "WebAssembly bundle for Wallet"
-repository = "https://github.com/brumemoney/wallet.wasm"
+repository = "https://github.com/brumewallet/wallet.wasm"
 license = "Unlicense"
 
 [lib]

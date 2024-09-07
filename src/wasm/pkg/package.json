@@ -9,7 +9,7 @@
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brumemoney/wallet.wasm"
+    "url": "https://github.com/brumewallet/wallet.wasm"
   },
   "files": [
     "wallet_wasm_bg.wasm",

@@ -12,5 +12,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: "npm ci"
-    - run: "npm diff --diff=@brumemoney/wallet.wasm@${{github.ref_name}} --diff=."
-    - run: "[[ -z $(npm diff --diff=@brumemoney/wallet.wasm@${{github.ref_name}} --diff=.) ]]"
+    - run: "npm diff --diff=@brumewallet/wallet.wasm@${{github.ref_name}} --diff=."
+    - run: "[[ -z $(npm diff --diff=@brumewallet/wallet.wasm@${{github.ref_name}} --diff=.) ]]"

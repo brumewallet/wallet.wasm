@@ -3,10 +3,10 @@
 WebAssembly bundle for Wallet
 
 ```bash
-npm i @brumemoney/wallet.wasm
+npm i @brumewallet/wallet.wasm
 ```
 
-[**Node Package 📦**](https://www.npmjs.com/package/@brumemoney/wallet.wasm)
+[**Node Package 📦**](https://www.npmjs.com/package/@brumewallet/wallet.wasm)
 
 ## Features
 - Reproducible building

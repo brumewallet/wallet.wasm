@@ -1,10 +1,10 @@
 {
   "type": "module",
-  "name": "@brumemoney/wallet.wasm",
+  "name": "@brumewallet/wallet.wasm",
   "version": "1.0.0",
   "description": "WebAssembly bundle for Wallet",
-  "homepage": "https://github.com/brumemoney/wallet.wasm",
-  "repository": "github:brumemoney/wallet.wasm",
+  "homepage": "https://github.com/brumewallet/wallet.wasm",
+  "repository": "github:brumewallet/wallet.wasm",
   "author": "hazae41",
   "license": "Unlicense",
   "main": "./dist/cjs/node/index.cjs",
